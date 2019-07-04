@@ -1,0 +1,82 @@
+git config --global user.name 'kongle'
+git config --global user.email '1057921470@qq.com'
+
+查看配置信息
+git config --list
+
+
+文件夹内初始化git
+git init
+
+创建文件
+touch 文件名
+编辑文件
+vi 文件名
+保存文件
+：wq
+
+查看文件状态
+git status
+
+添加到暂存区
+git add 文件名
+
+删除
+git rm 文件名
+
+提交到git仓库
+git commit -m '描述信息'
+
+clone 代码
+git clone https://github.com/kongle/test.git
+
+同步到git
+git push
+
+无法同步时
+config 文件 url 修改为 https://用户名：密码@github.com/用户名/仓库名.git
+
+
+git reflog
+git reset --hard hash值
+
+
+查看分支
+git branch -v
+创建分支
+git branch 分支名
+切换分支
+git checkout 分支名
+合并分支
+git merge 分支名
+
+
+
+
+错误：
+1.   You have not concluded your merge (MERGE_HEAD exists).
+Please, commit your changes before you merge.
+
+解决1.保留你本地的修改
+
+git merge --abort
+
+git reset --merge
+
+合并后记得一定要提交这个本地的合并
+
+然后在获取线上仓库
+
+git pull
+
+解决2.down下线上代码版本,抛弃本地的修改
+
+不建议这样做,但是如果你本地修改不大,或者自己有一份备份留存,可以直接用线上最新版本覆盖到本地
+
+git fetch --all
+
+
+
+git reset --hard origin/master
+
+git fetch
